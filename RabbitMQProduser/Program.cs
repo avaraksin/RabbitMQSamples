@@ -11,14 +11,14 @@ namespace RabbitMQProduser
 			using (var connection = GetRabbitConnection())
 			using (var channel = connection.CreateModel())
 			{
-				for (int i = 0; i < 10; i++)
+				for (int i = 0; i < 1; i++)
 				{
 					string message = DateTime.UtcNow.ToString();
 
 					var body = Encoding.UTF8.GetBytes(message);
 
 					channel.BasicPublish(exchange: "",
-										 routingKey: "hello",
+										 routingKey: "Notification",
 										 basicProperties: null,
 										 body: body);
 					
@@ -34,11 +34,11 @@ namespace RabbitMQProduser
 		{
 			ConnectionFactory factory = new ConnectionFactory
 			{
-				UserName = "niyvrxot",
-				Password = "NmOSQmD8PLvjH5eX2ovHuqY3OR53BAv9",
-				VirtualHost = "niyvrxot",
-				HostName = "woodpecker.rmq.cloudamqp.com"
-			};
+				UserName = "kquhcgmb",
+				Password = "4oVomTv1D4Hfeqiqp_C1c6kPQdJu4kzJ",
+				VirtualHost = "kquhcgmb",
+				HostName = "mustang.rmq.cloudamqp.com"
+            };
 			IConnection conn = factory.CreateConnection();
 			return conn;
 		}

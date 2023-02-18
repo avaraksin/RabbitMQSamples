@@ -24,7 +24,7 @@ namespace RabbitMQConsumer
 				};
 
 				
-				channel.BasicConsume(queue: "hello",
+				channel.BasicConsume(queue: "Notification",
 									 autoAck: true,
 									 consumer: consumer);
 
@@ -37,11 +37,11 @@ namespace RabbitMQConsumer
 		{
 			ConnectionFactory factory = new ConnectionFactory
 			{
-				UserName = "niyvrxot",
-				Password = "NmOSQmD8PLvjH5eX2ovHuqY3OR53BAv9",
-				VirtualHost = "niyvrxot",
-				HostName = "woodpecker.rmq.cloudamqp.com"
-			};
+                UserName = "kquhcgmb",
+                Password = "4oVomTv1D4Hfeqiqp_C1c6kPQdJu4kzJ",
+                VirtualHost = "kquhcgmb",
+                HostName = "mustang.rmq.cloudamqp.com"
+            };
 			IConnection conn = factory.CreateConnection();
 			return conn;
 		}
